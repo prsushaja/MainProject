@@ -14,7 +14,7 @@ public class CommonLogics extends CommonElement{
 		{
 		driver.switchTo().frame(i);
 		List<WebElement> AllElements = driver.findElements(By.xpath(Elementpath));
-		if (AllElements.size() > 0) {
+		if(AllElements.size() > 0) {
 			for (WebElement eachElement : AllElements) {
 
 				eachElement.click();
@@ -31,30 +31,33 @@ public class CommonLogics extends CommonElement{
 	public void ClickIfElementExists(WebDriver driver,String Elementpath) throws InterruptedException 
 	{
 		List<WebElement>allelements =driver.findElements(By.xpath(Elementpath));
-		for(int i=0;i<allelements.size();i++)
+		if(allelements.size()>0) 
 		{
-		if (allelements.size() > 0) 
-		{
+		
 			for (WebElement eachElement : allelements)
 			{
 
 				eachElement.click();
+				WaitForElementToBeVisible(driver,By.xpath("//ul[@class='legendWrap']"),3000);
+				scrolloption(driver,driver.findElement(By.xpath("//ul[@class='legendWrap']")));
+				WaitForElementToBeClickable(driver,By.xpath("//button[contains(text(),'Continue')]"),3000);
+				clickOnButton(driver.findElement(By.xpath("//button[contains(text(),'Continue')]")));
 				break;
 			
 			}
 		}
 		else
 		{
-			WaitForElementToBeVisible(driver,By.xpath("//ul[@class='legendWrap']"),3000);
+			WaitForElementToBeVisible(driver,By.xpath("//ul[@class='legendWrap']"),1000);
 			scrolloption(driver,driver.findElement(By.xpath("//ul[@class='legendWrap']")));
-			WaitForElementToBeClickable(driver,By.xpath("//button[contains(text(),'Continue')]"),3000);
+			WaitForElementToBeClickable(driver,By.xpath("//button[contains(text(),'Continue')]"),1000);
 			Thread.sleep(2000);
 			clickOnButton(driver.findElement(By.xpath("//button[contains(text(),'Continue')]")));
 		}
 		
 		}
 		
-	}
+	
 	public void ClickOnAddClose(WebDriver driver)
 	{
 		WaitForElementToBeClickable(driver,By.xpath("//*[@class='ic_circularclose_grey']"),60);

@@ -5,20 +5,21 @@
     <classes>
       <class name="Testcases.MakemyTripFlightSearch">
         <methods>
-          <include name="creditcardpay"/>
           <include name="launchTheBrowser"/>
           <include name="Infant_dob"/>
-          <include name="review_details"/>
-          <include name="seat_choose"/>
-          <include name="EnterTravellerData"/>
+          <include name="Review_Details"/>
+          <include name="Teardown"/>
           <include name="EnterTheURL"/>
-          <include name="EnterTravellerchildData"/>
+          <include name="EnterTravellerInfantData"/>
           <include name="EnterBooking_Details"/>
+          <include name="Proceed_Payment"/>
+          <include name="CreditCardPay"/>
+          <include name="Seat_Choose"/>
           <include name="deleteAdds"/>
-          <include name="EnterTravellerinfantData"/>
           <include name="EnterValidSearchCriteria"/>
-          <include name="proceed_payment"/>
           <include name="meal_selection"/>
+          <include name="EnterTravellerAdultData"/>
+          <include name="EnterTravellerChildData"/>
         </methods>
       </class> <!-- Testcases.MakemyTripFlightSearch -->
     </classes>

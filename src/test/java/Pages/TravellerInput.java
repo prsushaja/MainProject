@@ -17,30 +17,30 @@ WebDriver driver;
 	{
 		this.driver=driver;
 	}
-	public void Traveller_details(String Firstname,String Lastname) throws InterruptedException
+	public void Traveller_Details(String Firstname,String Lastname) throws InterruptedException
 	{
 		Thread.sleep(1000);
-		WaitForElementToBeVisible(driver,By.xpath("//div[@id='wrapper_ADULT']//button[@class='addTravellerBtn']"),2000);
+		WaitForElementToBeVisible(driver,By.xpath("//div[@id='wrapper_ADULT']//button[@class='addTravellerBtn']"),8000);
 		scrolloption(driver,driver.findElement(By.xpath("//div[@class='travellerWrapper']//h2")));
 		clickOnButton(driver.findElement(By.xpath("(//div[@id='wrapper_ADULT']//button[@class='addTravellerBtn'])")));
 		driver.findElement(By.xpath("//div[@id='wrapper_ADULT']//input[contains(@placeholder,'First')]")).sendKeys(Firstname);
-		WaitForElementToBeVisible(driver,By.xpath("//div[@id='wrapper_ADULT']//input[contains(@placeholder,'Last')]"),2000);
+		WaitForElementToBeVisible(driver,By.xpath("//div[@id='wrapper_ADULT']//input[contains(@placeholder,'Last')]"),8000);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@id='wrapper_ADULT']//input[contains(@placeholder,'Last')]")).sendKeys(Lastname);
-		WaitForElementToBeVisible(driver,By.xpath("//div[@id='wrapper_ADULT']//label[@tabindex='0']"),2000);
+		WaitForElementToBeVisible(driver,By.xpath("//div[@id='wrapper_ADULT']//label[@tabindex='0']"),9000);
 		driver.findElement(By.xpath("//div[@id='wrapper_ADULT']//label[@tabindex='0']")).click();
 	}
-	public void Travellerchild_details(String Firstname1,String Lastname1)
+	public void Travellerchild_Details(String Firstname1,String Lastname1)
 	{
-		WaitForElementToBeVisible(driver,By.xpath("(//div[@id='wrapper_CHILD']//button[@class='addTravellerBtn'])"),2000);
+		WaitForElementToBeVisible(driver,By.xpath("(//div[@id='wrapper_CHILD']//button[@class='addTravellerBtn'])"),8000);
 		clickOnButton(driver.findElement(By.xpath("(//div[@id='wrapper_CHILD']//button[@class='addTravellerBtn'])")));
 		driver.findElement(By.xpath("//div[@id='wrapper_CHILD']//input[contains(@placeholder,'First')]")).sendKeys(Firstname1);
 		driver.findElement(By.xpath("//div[@id='wrapper_CHILD']//input[contains(@placeholder,'Last')]")).sendKeys(Lastname1);
 		driver.findElement(By.xpath("//div[@id='wrapper_CHILD']//label[@tabindex='1']")).click();
 	}
-	public void Travellerinfant_details(String Firstname2,String Lastname2)
+	public void Travellerinfant_Details(String Firstname2,String Lastname2)
 	{
-		WaitForElementToBeVisible(driver,By.xpath("(//div[@id='wrapper_INFANT']//button[@class='addTravellerBtn'])"),2000);
+		WaitForElementToBeVisible(driver,By.xpath("(//div[@id='wrapper_INFANT']//button[@class='addTravellerBtn'])"),8000);
 		clickOnButton(driver.findElement(By.xpath("(//div[@id='wrapper_INFANT']//button[@class='addTravellerBtn'])")));
 		driver.findElement(By.xpath("//div[@id='wrapper_INFANT']//input[contains(@placeholder,'First')]")).sendKeys(Firstname2);
 		driver.findElement(By.xpath("//div[@id='wrapper_INFANT']//input[contains(@placeholder,'Last')]")).sendKeys(Lastname2);
@@ -48,7 +48,7 @@ WebDriver driver;
 	}
 	public void InfantDob_details()
 	{
-		WaitForElementToBeVisible(driver,By.xpath("//div[contains(text(),'Date')]"),2000);	
+		WaitForElementToBeVisible(driver,By.xpath("//div[contains(text(),'Date')]"),8000);	
 		clickOnElement(driver.findElement(By.xpath("//div[contains(text(),'Date')][//div[contains(@class,'dropdown__indicators')]]")));
 		Actions mouseaction= new Actions(driver);
 		mouseaction.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
@@ -61,7 +61,7 @@ WebDriver driver;
 		//clickOnElement(driver.findElement(By.xpath("//div[contains(text(),'India')]")));
 		//mouseaction.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
 	}
-	public void bookinginfo(String Mbnum,String email,String Pincode,String Statename,String address)
+	public void Bookinginfo(String Mbnum,String email,String Pincode,String Statename,String address)
 	{
 		WaitForElementToBeVisible(driver,By.xpath("//input[contains(@placeholder,'Mobile')]"),2000);	
 		WebElement mobileno=driver.findElement(By.xpath("//input[contains(@placeholder,'Mobile')]"));
@@ -83,7 +83,7 @@ WebDriver driver;
 		clickOnElement(driver.findElement(By.xpath("//button[contains(text(),'Continue')]")));
 	
 	}
-	public void review()
+	public void Review()
 	{
 		WaitForElementToBeVisible(driver,By.xpath("//div[@class='detailsPopupFooter']//button[contains(text(),'CONFIRM')]"),2000);	
 		clickOnElement(driver.findElement(By.xpath("//div[@class='detailsPopupFooter']//button[contains(text(),'CONFIRM')]")));

@@ -8,20 +8,23 @@ public class Booking_Details extends CommonElement
 {
 	WebDriver driver;
 	
+	By selectRadioButton = By.xpath("(//div[@class='insBottomSection']//p[@class='radioboxTitle'])");
+	
 	public Booking_Details(WebDriver driver)
 	{
 		this.driver=driver;
 	}
 	
-	public void SelectRadiobutton(String radvalue)
+	public void SelectInsuranceMode(String radvalue) throws InterruptedException
 	{
+		Thread.sleep(5000);
 		
-		SelectAllValueFromList(driver,By.xpath("(//div[@class='insBottomSection']//p[@class='radioboxTitle'])"),radvalue);
+		SelectAllValueFromList(driver,selectRadioButton,radvalue);
 		
 	}
 	public String Getradiovalidation()
 	{
-		return GetTextOfelement(driver.findElement(By.xpath("(//div[@class='insBottomSection']//p[@class='radioboxTitle'])")));
+		return GetTextOfelement(driver.findElement(selectRadioButton));
 	}
 	
 	

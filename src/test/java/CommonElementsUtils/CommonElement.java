@@ -60,7 +60,16 @@ public class CommonElement
 		if (buttonElement.isEnabled())
 			buttonElement.click();
 	}
-	
+	public void ClickOnViewButton(WebElement buttonElement)
+	{
+		if (buttonElement.isEnabled())
+			buttonElement.click();
+	}
+	public void ClickOnMealButton(WebElement buttonElement)
+	{
+		if (buttonElement.isEnabled())
+			buttonElement.click();
+	}
 	public boolean SelectValueinCalender(WebDriver driver,String expectedDay)
 	{
 		List<WebElement> totalWeekRows = driver.findElements(By.xpath("(//*[@class='DayPicker-Months']//div)[1]//div[@class='DayPicker-Week']"));

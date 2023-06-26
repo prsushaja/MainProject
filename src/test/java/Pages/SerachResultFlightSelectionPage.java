@@ -37,11 +37,10 @@ public class SerachResultFlightSelectionPage extends CommonElement {
 	}
 	public void Selectsortorder(String order1)
 	{
-		System.out.println("hai");
 		WaitForElementToBeVisible(driver,By.xpath("(//span[@class='pointer'])[2]"),1500);	
 		SelectAllValueFromList(driver,By.xpath("//span[@class='pointer']"),order1);
 	}
-	public void Book_ticket()
+	public void Book_Ticket()
 	{
 		String parent= driver.getWindowHandle();
 		WaitForElementToBeVisible(driver,By.xpath("(//button[text()='Book Now'])[1]"),1500);	

@@ -12,11 +12,11 @@ public ProceedPayment(WebDriver driver)
 {
 	this.driver=driver;
 }
-public void proceed_pay()
+public void Proceed_Pay()
 {
-	WaitForElementToBeVisible(driver,By.xpath("//div[@id='ACKNOWLEDGE_SECTION']"),2000);
+	WaitForElementToBeVisible(driver,By.xpath("//div[@id='ACKNOWLEDGE_SECTION']"),7000);
 	scrolloption(driver,driver.findElement(By.xpath("//div[@id='ACKNOWLEDGE_SECTION']")));
-	WaitForElementToBeClickable(driver,By.xpath("//div[@id='ACKNOWLEDGE_SECTION']//button[contains(text(),'Proceed')]"),2000);
+	WaitForElementToBeClickable(driver,By.xpath("//div[@id='ACKNOWLEDGE_SECTION']//button[contains(text(),'Proceed')]"),7000);
 	clickOnButton(driver.findElement(By.xpath("//div[@id='ACKNOWLEDGE_SECTION']//button[contains(text(),'Proceed')]")));
 
 }
